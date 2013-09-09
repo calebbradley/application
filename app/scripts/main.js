@@ -10,6 +10,7 @@
                 userInput[0] = initRate;
                 $( "#init-rate" ).val( "" );
             }
+
             initYears = $( "#init-years" ).val();
             if ( isNaN( initYears ) || initYears === "" ) {
                 $( "#init-years" ).addClass( "warning" ).val( "Please, enter the years." );    
@@ -17,6 +18,7 @@
                 userInput[1] = initYears;
                 $( "#init-years" ).val( "" );
             }
+            
             initAmount = $( "#init-amount" ).val();
             if ( isNaN( initAmount ) || initAmount === "" ) {
                 $( "#init-amount" ).addClass( "warning" ).val( "Please, enter the amount." );
@@ -24,6 +26,7 @@
                 userInput[2] = initAmount;
                 $( "#init-amount" ).val( "" );
             }
+            
             terms = new InvestmentTerms( initRate, initYears, initAmount );
             if ( isNaN( terms.getMonths() ) ) {
                 $( "#get-months" ).text( "Please, fill out the input fields correctly." );
